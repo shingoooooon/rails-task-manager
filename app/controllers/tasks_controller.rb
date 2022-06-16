@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
+    @tasks = Task.all.reverse
   end
 
   def show
@@ -14,7 +14,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     if @task.save
-      redirect_to task_path(@task)
+      redirect_to tasks_path
     else
       render 'new.html.erb'
    end
@@ -27,7 +27,7 @@ class TasksController < ApplicationController
   def update
     @task = Task.find(params[:id])
     if @task.update(task_params)
-      redirect_to task_path(@task)
+      redirect_to tasks_path
     else
       render "edit.html.erb"
     end

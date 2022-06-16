@@ -1,3 +1,80 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body  {
+  background-image: asset_url("task-gb.jpg");
+  background-size: cover;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.container {
+  height: 100vh !important;
+  width: 480px !important;
+  background: #F2EFF2;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+}
+
+.card-product {
+  overflow: hidden;
+  height: 60px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.card-product:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.card-product h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 1px;
+}
+ .link {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.btn {
+  background: #A8E1F9;
+}
+
+.btn:hover {
+  background: #a8c6f9;
+}
+
+.card-product-show {
+  overflow: hidden;
+  height: auto;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  align-items: center;
+  padding: 10px;
+}
+
+.check {
+  display: block;
+  transform: scale(3);
+  margin: 20px auto;
+}
+
+.done {
+ background: #F77777;
+}
+
+.notyet {
+  background: #88D4A5;
+}

@@ -1,14 +1,19 @@
-<h1>All Tasks</h1>
-
-  <% @tasks.each do |task| %>
-    <p>
-    <% if task.completed %>
-      <i class="far fa-check-square"></i>
-    <% else %>
-      <i class="far fa-square"></i>
-    <% end %>
-    <%= link_to task.title, task_path(task) %>
-    </p>
+<div class="container text-center p-5">
+  <h1>All Tasks</h1>
+  <%= link_to new_task_path, class: 'btn my-3' do %>
+    <i class="fas fa-plus me-2"></i>New task
   <% end %>
-
-<%= link_to "Add new task", new_task_path, class: 'btn btn-primary' %>
+  <% @tasks.each do |task| %>
+    <div class="card-product mb-3">
+      <%= link_to "", task_path(task), class:"link" %>
+      <% if task.completed %>
+        <i class="far fa-check-square fa-2x border-end done p-3"></i>
+      <% else %>
+        <i class="far fa-square fa-2x border-end notyet p-3"></i>
+      <% end %>
+      <div class="card-product-infos">
+        <h2 class="ms-3"><%= task.title %></h2>
+      </div>
+    </div>
+  <% end %>
+</div>
