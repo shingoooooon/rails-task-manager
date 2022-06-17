@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgrespl
+  adapter: postgresql
   encoding: unicode
   pool: 5
 
